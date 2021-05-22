@@ -1,0 +1,11 @@
+#loginPage{
+    background-color: aquamarine;
+    height: 640px;
+    
+}
+#loginPage button{
+    background-color: black;
+    color: aquamarine;
+    margin-top: 20%;
+    margin-left: 40%;
+}
