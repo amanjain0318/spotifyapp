@@ -34,8 +34,7 @@ export class SpotifyHomeComponent implements OnInit {
 
     this.httpClient.get<any>('https://api.spotify.com/v1/me/playlists').subscribe(
       data => {
-        alert(JSON.stringify(data, null , ''));
-        
+        alert("Process is under construction"); 
       }
     );
   }
