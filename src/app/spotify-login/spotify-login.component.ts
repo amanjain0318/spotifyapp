@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-spotify-login',
@@ -28,7 +29,7 @@ export class SpotifyLoginComponent implements OnInit {
     let url = this.authUrl;
     url += '?client_id=' + this.clientId;
     url += '&response_type=code';
-    url += '&redirect_uri=' + encodeURI('http://localhost:4200/index.html');
+    url += '&redirect_uri=' + encodeURI(`${environment.baseUrl}${'index.html'}`);
     url += '&show_dialog=true';
     url += '&scope=user-read-recently-played user-top-read user-read-playback-position user-read-playback-state user-modify-playback-state user-read-currently-playing app-remote-control playlist-modify-public playlist-modify-private playlist-read-private playlist-read-collaborative user-follow-modify user-follow-read user-library-modify user-library-read user-read-email user-read-private';
     console.log(url);
@@ -43,14 +44,14 @@ export class SpotifyLoginComponent implements OnInit {
       code = urlParam.get('code');
       this.fetchAccestoken(code);
       // alert('response '+JSON.parse(xhr.responseText));
-       window.history.pushState("", "", 'http://localhost:4200/index.html');
+       window.history.pushState("", "", `${environment.baseUrl}${'index.html'}`);
     }
   }
   fetchAccestoken(code: any) {
     
     let body = "grant_type=authorization_code";
     body += '&code=' + code;
-    body += '&redirect_uri=' + encodeURI('http://localhost:4200/index.html');
+    body += '&redirect_uri=' + encodeURI(`${environment.baseUrl}${'index.html'}`);
     body += '&client_id=' + this.clientId;
     body += '&client_secret=' + this.clientSecret;
     let xhr = new XMLHttpRequest();
