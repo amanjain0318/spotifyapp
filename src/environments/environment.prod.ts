@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://paxspotifyapp.herokuapp.com/'
+  baseUrl: './'
+//  baseUrl: 'https://paxspotifyapp.herokuapp.com/'
 };
