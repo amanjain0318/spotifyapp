@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //baseUrl: 'http://localhost:8086/',
-  baseUrl: 'https://paxspotifyapp.herokuapp.com/'
+  baseUrl: 'http://localhost:8086/',
+//  baseUrl: 'https://paxspotifyapp.herokuapp.com/'
 };
 
 /*
