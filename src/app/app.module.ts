@@ -9,6 +9,7 @@ import { SpotifyAuthInterceptorService } from './spotify-auth-interceptor.servic
 import {FormsModule} from '@angular/forms';
 import { SpotifyLoginComponent } from './spotify-login/spotify-login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
     FormsModule
   ],
   providers: [{
